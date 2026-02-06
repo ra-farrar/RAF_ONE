@@ -207,3 +207,123 @@ h2 {
     gap: var(--space-2);
   }
 }
+
+/* Debug outlines (toggle with "d") */
+body.debug {
+  --debug-sections: #2b6cff;
+  --debug-containers: #22b455;
+  --debug-gutters: #8a46ff;
+  --debug-interactive: #f39a17;
+  --debug-base: rgba(0, 0, 0, 0.25);
+}
+
+body.debug * {
+  outline: 1px dashed var(--debug-base);
+  outline-offset: -1px;
+}
+
+body.debug header,
+body.debug main,
+body.debug footer,
+body.debug .section {
+  outline: 2px dashed var(--debug-sections);
+  outline-offset: -2px;
+}
+
+body.debug .container,
+body.debug .page-header,
+body.debug .page-footer,
+body.debug .experience-item,
+body.debug .skill-tag {
+  outline: 2px dashed var(--debug-containers);
+  outline-offset: -2px;
+}
+
+body.debug .container::before,
+body.debug .section::before,
+body.debug .page-header::before,
+body.debug .page-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  outline: 1px dashed var(--debug-gutters);
+  pointer-events: none;
+}
+
+body.debug .container,
+body.debug .section,
+body.debug .page-header,
+body.debug .page-footer {
+  position: relative;
+}
+
+body.debug a,
+body.debug button,
+body.debug [role="button"],
+body.debug input,
+body.debug textarea,
+body.debug select {
+  outline: 2px dashed var(--debug-interactive);
+  outline-offset: -2px;
+}
+
+body.debug .debug-legend {
+  display: block;
+}
+
+.debug-legend {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  background: #ffffff;
+  color: #151516;
+  border-radius: 0.6rem;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 9999;
+}
+
+.debug-legend-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.debug-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.debug-legend-item:last-of-type {
+  margin-bottom: 0.4rem;
+}
+
+.debug-legend-hint {
+  color: rgba(21, 21, 22, 0.65);
+}
+
+.swatch {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 0.2rem;
+  border: 2px dashed currentColor;
+}
+
+.swatch-sections {
+  color: var(--debug-sections);
+}
+
+.swatch-containers {
+  color: var(--debug-containers);
+}
+
+.swatch-gutters {
+  color: var(--debug-gutters);
+}
+
+.swatch-interactive {
+  color: var(--debug-interactive);
+}

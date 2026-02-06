@@ -24,28 +24,28 @@
           <h2>Experience</h2>
           <ul class="experience-list">
             <li class="experience-item">
-              <p class="role">VP, Growth Marketing</p>
-              <p class="meta">Northline Labs · 2023–Present</p>
+              <p class="role">Senior Product Marketing Manager, US Prime Paid Media</p>
+              <p class="meta">Amazon | 2023 – Present</p>
               <p class="impact">Scaled pipeline programs and doubled qualified inbound demand.</p>
             </li>
             <li class="experience-item">
-              <p class="role">Director, Brand &amp; Content</p>
-              <p class="meta">Atlas &amp; Co. · 2020–2023</p>
+              <p class="role">Product Marketing Manager, Prime Access</p>
+              <p class="meta">Amazon | 2022 – 2024</p>
               <p class="impact">Repositioned brand and launched a flagship thought-leadership platform.</p>
             </li>
             <li class="experience-item">
-              <p class="role">Senior Manager, Lifecycle</p>
-              <p class="meta">OrbitPay · 2018–2020</p>
+              <p class="role">Product & Brand Marketing Manager, Live Journalism</p>
+              <p class="meta">The Wall Street Journal | 2021 – 2022</p>
               <p class="impact">Improved activation by 28% through segmented onboarding journeys.</p>
             </li>
             <li class="experience-item">
-              <p class="role">Marketing Manager</p>
-              <p class="meta">Cedar Grove · 2016–2018</p>
+              <p class="role">Marketing Manager, Professional Memberships</p>
+              <p class="meta">The Wall Street Journal | 2019 – 2021</p>
               <p class="impact">Built an integrated campaign engine across email, paid, and events.</p>
             </li>
             <li class="experience-item">
-              <p class="role">Associate, Growth</p>
-              <p class="meta">Brightline Studio · 2014–2016</p>
+              <p class="role">Team Lead, Digital Marketing Strategy</p>
+              <p class="meta">Thomas | 2018 – 2019</p>
               <p class="impact">Introduced data-driven reporting that cut CAC by 18%.</p>
             </li>
           </ul>
@@ -91,5 +91,31 @@
         <p>© 2026 Ryan Farrar. Built with GitHub + Codex.</p>
       </div>
     </footer>
+
+    <div class="debug-legend" aria-hidden="true">
+      <div class="debug-legend-title">Debug</div>
+      <div class="debug-legend-item"><span class="swatch swatch-sections"></span>Sections</div>
+      <div class="debug-legend-item"><span class="swatch swatch-containers"></span>Containers / Cards</div>
+      <div class="debug-legend-item"><span class="swatch swatch-gutters"></span>Measures / Gutters</div>
+      <div class="debug-legend-item"><span class="swatch swatch-interactive"></span>Interactive</div>
+      <div class="debug-legend-hint">Press “D” to toggle</div>
+    </div>
+
+    <script>
+      document.addEventListener("keydown", (event) => {
+        const tag = event.target.tagName;
+        if (
+          tag === "INPUT" ||
+          tag === "TEXTAREA" ||
+          event.target.isContentEditable
+        ) {
+          return;
+        }
+
+        if (event.key === "d" || event.key === "D") {
+          document.body.classList.toggle("debug");
+        }
+      });
+    </script>
   </body>
 </html>
